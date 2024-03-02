@@ -1,10 +1,6 @@
 'use client';
-import { track } from '@vercel/analytics';
 
 import { ModeToggle } from './mode-toggle';
-import { cn } from '@/lib/utils';
-import { buttonVariants } from '@/components/ui/button';
-
 function IntroSection() {
   return (
     <section id='intro' className='space-y-6 py-8 md:py-12 lg:py-32 relative'>
@@ -50,26 +46,6 @@ function IntroSection() {
           Melhorias na internacionalização: O Next.js 14 torna mais fácil a construção de sites multilíngues com suporte 
           aprimorado para rotas internacionais.
         </p>
-        <div className='space-x-4'>
-          <a
-            href='#investment'
-            className='bg-primary py-2 px-4 text-md text-white rounded shadow-lg font-bold'
-            onClick={() => {
-              track('enrollment', { location: 'intro' });
-            }}
-          >
-            Quero fazer parte
-          </a>
-          <a
-            href='#feature'
-            className={cn(buttonVariants({ variant: 'outline', size: 'lg' }))}
-            onClick={() => {
-              track('features');
-            }}
-          >
-            Saiba mais
-          </a>
-        </div>
       </div>
     </section>
   );
